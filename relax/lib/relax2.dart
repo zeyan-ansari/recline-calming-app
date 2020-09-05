@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:relax/special.dart';
 import 'package:quotes/quotes.dart';
 
 class Relax2 extends StatefulWidget {
@@ -52,7 +51,7 @@ void initPlayer(){
             child:
             Stack(
               children: <Widget>[
-                Container(margin: EdgeInsets.only(top: 180,left: 10,right: 10),padding:EdgeInsets.all(15),decoration: BoxDecoration(
+                Container(margin: EdgeInsets.only(top: 580,left: 10,right: 10),padding:EdgeInsets.all(15),decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),color: Colors.black.withOpacity(0.5),
                 ),
                   child: Text(Quotes.getRandom().getContent(),textAlign: TextAlign.center,style: GoogleFonts.roboto(
@@ -231,10 +230,7 @@ void initPlayer(){
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   Expanded(
-                                    child: InkWell(onTap:(){ Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) =>Special()),
-                                    );},
+                                    child: InkWell(onTap:(){},
                                       child: Container(height: MediaQuery.of(context).size.width*0.5,margin:EdgeInsets.all(10),decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(25),color: Colors.black.withOpacity(0.5),
                                       ),
@@ -298,7 +294,7 @@ void initPlayer(){
           ),
           Column(crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(margin: EdgeInsets.only(top: 50),
+              Container(margin: EdgeInsets.only(top: 80),
                 alignment: Alignment.topCenter,
                 child: Text('Recline.',style: GoogleFonts.pacifico(
                 textStyle: TextStyle(color: Colors.white, letterSpacing: 1,fontSize: 55),
